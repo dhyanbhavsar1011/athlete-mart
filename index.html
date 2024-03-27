@@ -4,7 +4,307 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <title>Athlete Mart</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="logo_cls">
+        <a href="/"> <img src="img/logo.svg" alt="Athlete Mart" /></a>
+      </div>
+      <!-- <nav class="desk_tab_menu_cls">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/franchise.html">Franchise</a></li>
+          <li><a href="/contact.html">Contact us</a></li>
+        </ul>
+      </nav> -->
+      <nav class="mobile_nav_cls">
+        <ul class="navbar" id="navbar">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/blogs.html">Blogs</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/franchise.html">Franchise</a></li>
+          <li><a href="/contact.html">Contact us</a></li>
+          <a class="close" href="#">
+            <img src="img/close.png" alt="close" />
+          </a>
+        </ul>
+        <a class="hamburger" href="#navbar">
+          <img src="img/menu.png" alt="menu" />
+        </a>
+      </nav>
+    </header>
+    <!-- header ends -->
+    <main>
+      <!-- slider starts -->
+      <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+        <ul class="slides-container" id="slides-container">
+          <li class="banner"></li>
+          <li class="banner"></li>
+          <li class="banner"></li>
+        </ul>
+      </section>
+      <!-- slider ends -->
+
+      <!-- banner starts -->
+      <section class="banner-wrapper">
+        <div class="banner-parent-wrapper">
+          <div class="banner-child-wrapper-1">
+            <div class="banner-wrapper-infor">
+              <h2 class="title-banner">For Wome'ns</h2>
+            </div>
+          </div>
+          <div class="banner-child-wrapper-2">
+            <div class="banner-wrapper-infor-2">
+              <h2 class="image-subtitle">CATALOGUE 2024</h2>
+              <h4 class="title-banner">MID SEASON</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner ends -->
+
+      <!-- product starts -->
+      <section class="product-wrapper">
+        <h2>Featured<span>.</span></h2>
+        <div class="product-parent-box">
+          <div class="product-child-box">
+            <div class="img_product_cls">
+              <img src="img/product_1.webp" height="222px" alt="product 1" />
+            </div>
+            <div class="product_info">
+              <div class="product_inner_info">
+                <div class="category"><p>Women</p></div>
+                <div class="star-rating"></div>
+              </div>
+              <a href="#">
+                <h3>Women’s Jacket Down Fill</h3>
+              </a>
+              <span class="price"><s>$190 </s>$130</span>
+            </div>
+          </div>
+          <div class="product-child-box">
+            <div class="img_product_cls">
+              <img src="img/product_1.webp" height="222px" alt="product 1" />
+            </div>
+            <div class="product_info">
+              <div class="product_inner_info">
+                <div class="category"><p>Women</p></div>
+                <div class="star-rating"></div>
+              </div>
+              <a href="#">
+                <h3>Women’s Jacket Down Fill</h3>
+              </a>
+              <span class="price"><s>$190 </s>$130</span>
+            </div>
+          </div>
+          <div class="product-child-box">
+            <div class="img_product_cls">
+              <img src="img/product_1.webp" height="222px" alt="product 1" />
+            </div>
+            <div class="product_info">
+              <div class="product_inner_info">
+                <div class="category"><p>Women</p></div>
+                <div class="star-rating"></div>
+              </div>
+              <a href="#">
+                <h3>Women’s Jacket Down Fill</h3>
+              </a>
+              <span class="price"><s>$190 </s>$130</span>
+            </div>
+          </div>
+          <div class="product-child-box">
+            <div class="img_product_cls">
+              <img src="img/product_1.webp" height="222px" alt="product 1" />
+            </div>
+            <div class="product_info">
+              <div class="product_inner_info">
+                <div class="category"><p>Women</p></div>
+                <div class="star-rating"></div>
+              </div>
+              <a href="#">
+                <h3>Women’s Jacket Down Fill</h3>
+              </a>
+              <span class="price"><s>$190 </s>$130</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- product ends -->
+
+      <!-- hero banner starts -->
+      <section class="hero-banner-wrapper">
+        <div class="banner_1">
+          <img src="img/hero_banner_1.webp" height="334px" />
+        </div>
+        <div class="banner_2">
+          <img src="img/hero_banner_2.webp" />
+          <div class="hero-banner-info">
+            <span>WHEREVER YOU TAKE RUNNING</span>
+            <h4>Running</h4>
+            <button class="btn_cls">Shop Collection</button>
+          </div>
+        </div>
+      </section>
+      <!-- hero banner ends -->
+
+      <!-- Fitness Equipment Starts -->
+      <section class="fitness-banner-wrapper">
+        <div class="banner_fitness">
+          <img src="img/banner_fitness.webp" height="230px" />
+        </div>
+        <div class="f-banner-info">
+          <span>WHEREVER YOU TAKE RUNNING</span>
+          <h4>Running</h4>
+          <button class="btn_cls">Shop Collection</button>
+        </div>
+      </section>
+      <!-- Fitness Equipment Ends -->
+
+      <!-- Why Us section starts -->
+      <section class="why-us-wrapper">
+        <div class="card-parent-wrapper">
+          <div class="card-child-wrapper">
+            <img src="img/ic_1.png" width="50px" />
+            <h2>Ready For you!</h2>
+            <p>
+              Need some help finding the right product? Use our contact form or
+              give us a call +31 416 652803
+            </p>
+          </div>
+          <div class="card-child-wrapper">
+            <img src="img/ic_1.png" width="50px" />
+            <h2>Ready For you!</h2>
+            <p>
+              Need some help finding the right product? Use our contact form or
+              give us a call +31 416 652803
+            </p>
+          </div>
+          <div class="card-child-wrapper">
+            <img src="img/ic_1.png" width="50px" />
+            <h2>Ready For you!</h2>
+            <p>
+              Need some help finding the right product? Use our contact form or
+              give us a call +31 416 652803
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Why Us ends -->
+
+      <!-- Client Logo starts -->
+      <section class="customer-logos slider client-wrapper">
+        <div class="slide">
+          <img src="img/logo1.webp" />
+        </div>
+        <div class="slide">
+          <img src="img/logo2.webp" />
+        </div>
+        <div class="slide">
+          <img src="img/logo3.webp" />
+        </div>
+        <div class="slide">
+          <img src="img/logo4.webp" />
+        </div>
+        <div class="slide">
+          <img src="img/logo5.webp" />
+        </div>
+        <div class="slide">
+          <img src="img/logo6.webp" />
+        </div>
+      </section>
+
+      <!-- Client Logo ends -->
+    </main>
+
+    <!-- Footer Starts here -->
+    <footer>
+      <div class="footer-parent">
+        <div class="footer-child">
+          <h2>Get Help</h2>
+          <ul>
+            <li><a href="#">Contact & FAQ</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">Visit studio</a></li>
+            <li><a href="#">Interest Free Period</a></li>
+            <li><a href="#">Cipmoney</a></li>
+          </ul>
+        </div>
+        <div class="footer-child">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="#">Contact & FAQ</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">Visit studio</a></li>
+            <li><a href="#">Interest Free Period</a></li>
+            <li><a href="#">Cipmoney</a></li>
+          </ul>
+        </div>
+        <div class="footer-child">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="#">Contact & FAQ</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">Visit studio</a></li>
+            <li><a href="#">Interest Free Period</a></li>
+            <li><a href="#">Cipmoney</a></li>
+          </ul>
+        </div>
+        <div class="footer-child">
+          <h2>Subscribe for Newletter</h2>
+          <p>
+            Sign up for our newsletter and stay up-to-date with the latest
+            collection, the latest trends and the best deals!
+          </p>
+          <form action="#" method="post" class="newsletter">
+            <input
+              type="email"
+              class="email-box"
+              placeholder="Enter your email"
+            />
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-parent">
+        <div class="footer-child-bottom">
+          <span>© 2024 AtheleteMart.COM</span>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
