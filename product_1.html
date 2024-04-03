@@ -22,13 +22,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
-    <title>Athlete Mart</title>
+    <title>Athlete Mart - Product</title>
   </head>
   <body>
-    <header>
+    <header class="white-bg">
       <div class="logo_cls">
-        <a href="/"> <img src="img/logo.svg" alt="Athlete Mart" /></a>
+        <a href="/"> <img src="img/logo-black.svg" alt="Athlete Mart" /></a>
       </div>
 
       <div class="navigation_searchbar">
@@ -58,16 +57,16 @@
               </a>
             </ul>
             <a class="hamburger" href="#navbar">
-              <img src="img/menu.png" alt="menu" />
+              <img src="img/hamburger.svg" alt="menu" />
             </a>
           </nav>
         </div>
         <div class="user-ic">
-          <img src="img/user-w.svg" height="25px" />
+          <img src="img/user-black.svg" height="25px" />
         </div>
         <div class="searchbar">
           <button class="open-popup">
-            <img src="img/search.svg" height="25px" />
+            <img src="img/search-black.svg" height="25px" />
           </button>
         </div>
       </div>
@@ -87,35 +86,119 @@
     </div>
     <!-- header ends -->
     <main>
-      <!-- slider starts -->
-      <section class="slider-wrapper">
-        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-        <ul class="slides-container" id="slides-container">
-          <li class="banner"></li>
-          <li class="banner"></li>
-          <li class="banner"></li>
-        </ul>
-      </section>
-      <!-- slider ends -->
-
-      <!-- banner starts -->
-      <section class="banner-wrapper">
-        <div class="banner-parent-wrapper">
-          <div class="banner-child-wrapper-1">
-            <div class="banner-wrapper-infor">
-              <h2 class="title-banner">For Wome'ns</h2>
-            </div>
+      <!-- Product main container start -->
+      <div class="container product-container-wrapper">
+        <div class="parent-box-product">
+          <div class="box-child-product">
+            <div class="product-img-main"><img src="img/product.webp" /></div>
           </div>
-          <div class="banner-child-wrapper-2">
-            <div class="banner-wrapper-infor-2">
-              <h2 class="image-subtitle">CATALOGUE 2024</h2>
-              <h4 class="title-banner">MID SEASON</h4>
+          <div class="box-child-product-2">
+            <h1>Women’s Jacket Down Fill</h1>
+            <div class="price-box">
+              <s>$130</s>
+              <p>$90</p>
+            </div>
+            <div class="hr-line"></div>
+            <div class="description-cls">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
+            <div class="counter-cls">
+              <h4>Hurry up ! Deal ends in :</h4>
+              <div id="counter"></div>
+              <script>
+                // Set the target time for the countdown (24-hour format, e.g., 'hh:mm:ss')
+                const targetTime = "23:59:59";
+
+                // Update the counter every second
+                const timer = setInterval(() => {
+                  // Get the current date and time
+                  const now = new Date();
+
+                  // Create a new Date object with today's date and the target time
+                  const targetDate = new Date(
+                    now.getFullYear(),
+                    now.getMonth(),
+                    now.getDate(),
+                    ...targetTime.split(":")
+                  ).getTime();
+
+                  // Calculate the remaining time
+                  let distance = targetDate - now.getTime();
+
+                  // If the target time is in the past, move it to the next day
+                  if (distance < 0) {
+                    const nextDay = new Date(
+                      now.getFullYear(),
+                      now.getMonth(),
+                      now.getDate() + 1,
+                      ...targetTime.split(":")
+                    ).getTime();
+                    distance = nextDay - now.getTime();
+                  }
+
+                  // Calculate hours, minutes, and seconds
+                  const hours = Math.floor(distance / (1000 * 60 * 60));
+                  const minutes = Math.floor(
+                    (distance % (1000 * 60 * 60)) / (1000 * 60)
+                  );
+                  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                  // Display the countdown
+                  document.getElementById(
+                    "counter"
+                  ).innerHTML = `<div>${hours}</div> <div>${minutes}</div>  <div>${seconds}</div> `;
+                }, 1000);
+              </script>
+            </div>
+            <div class="add-to-cart-cls">
+              <div class="qty">
+                <button class="minus" id="minus">-</button>
+                <input
+                  type="number"
+                  min="1"
+                  max="4"
+                  class="qty-input"
+                  value="1"
+                  id="input"
+                />
+                <button class="plus" id="plus">+</button>
+              </div>
+              <div class="add-button-cls"><button>Add To Cart</button></div>
+              <script>
+                const minusButton = document.getElementById("minus");
+                const plusButton = document.getElementById("plus");
+                const inputField = document.getElementById("input");
+
+                minusButton.addEventListener("click", (event) => {
+                  event.preventDefault();
+                  const currentValue = Number(inputField.value) || 0;
+                  inputField.value = currentValue - 1;
+                });
+
+                plusButton.addEventListener("click", (event) => {
+                  event.preventDefault();
+                  const currentValue = Number(inputField.value) || 0;
+                  inputField.value = currentValue + 1;
+                });
+              </script>
+            </div>
+            <div class="hr-line"></div>
+            <div class="bottom-info">
+              <p class="Info-title">SKU:<span>D2300-3-2-3 </span></p>
+              <p class="Info-title">Category: <span>Womens </span></p>
+              <p class="Info-title">Tags:<span>Hot, Trend </span></p>
             </div>
           </div>
         </div>
-      </section>
-      <!-- banner ends -->
+      </div>
+      <!-- Product main container end -->
 
       <!-- product starts -->
       <section class="product-wrapper">
@@ -212,35 +295,6 @@
       </section>
       <!-- product ends -->
 
-      <!-- hero banner starts -->
-      <section class="hero-banner-wrapper">
-        <div class="banner_1">
-          <img src="img/hero_banner_1.webp" height="334px" />
-        </div>
-        <div class="banner_2">
-          <img src="img/hero_banner_2.webp" />
-          <div class="hero-banner-info">
-            <span>WHEREVER YOU TAKE RUNNING</span>
-            <h4>Running</h4>
-            <button class="btn_cls">Shop Collection</button>
-          </div>
-        </div>
-      </section>
-      <!-- hero banner ends -->
-
-      <!-- Fitness Equipment Starts -->
-      <section class="fitness-banner-wrapper">
-        <div class="banner_fitness">
-          <img src="img/banner_fitness.webp" height="230px" />
-        </div>
-        <div class="f-banner-info">
-          <span>WHEREVER YOU TAKE RUNNING</span>
-          <h4>Running</h4>
-          <button class="btn_cls">Shop Collection</button>
-        </div>
-      </section>
-      <!-- Fitness Equipment Ends -->
-
       <!-- Why Us section starts -->
       <section class="why-us-wrapper">
         <div class="card-parent-wrapper">
@@ -271,29 +325,6 @@
         </div>
       </section>
       <!-- Why Us ends -->
-
-      <!-- Client Logo starts -->
-      <section class="customer-logos slider client-wrapper">
-        <div class="slide">
-          <img src="img/logo1.webp" />
-        </div>
-        <div class="slide">
-          <img src="img/logo2.webp" />
-        </div>
-        <div class="slide">
-          <img src="img/logo3.webp" />
-        </div>
-        <div class="slide">
-          <img src="img/logo4.webp" />
-        </div>
-        <div class="slide">
-          <img src="img/logo5.webp" />
-        </div>
-        <div class="slide">
-          <img src="img/logo6.webp" />
-        </div>
-      </section>
-
       <!-- Client Logo ends -->
     </main>
 

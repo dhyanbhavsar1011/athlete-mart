@@ -42,3 +42,36 @@ $(document).ready(function () {
   });
 });
 // Client Logo ends
+
+// Search Bar popup start
+document.querySelector(".open-popup").addEventListener("click", function () {
+  document.querySelector(".custom-popup").style.display = "block";
+});
+
+document.querySelector(".close-popup").addEventListener("click", function () {
+  document.querySelector(".custom-popup").style.display = "none";
+});
+
+document.querySelector(".search-button").addEventListener("click", function () {
+  var searchTerm = document.querySelector(".search-input").value;
+  var searchResults = document.querySelector(".search-results");
+  searchResults.innerHTML = "Search results for: " + searchTerm;
+});
+
+// Search bar popup end
+
+const minusButton = document.getElementById("minus");
+const plusButton = document.getElementById("plus");
+const inputField = document.getElementById("input");
+
+minusButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const currentValue = Number(inputField.value) || 0;
+  inputField.value = currentValue - 1;
+});
+
+plusButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const currentValue = Number(inputField.value) || 0;
+  inputField.value = currentValue + 1;
+});
