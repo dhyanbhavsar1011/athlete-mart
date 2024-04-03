@@ -959,7 +959,7 @@ p.Info-title {
 .price-product {
   font-size: 24px;
 }
-button.checkoutbtn {
+.checkoutbtn {
   background: #343434;
   padding: 10px;
   width: 100%;
@@ -976,6 +976,83 @@ button.checkoutbtn {
 .checkoutbtn:hover {
   background: red;
 }
+
+/* Checkout starts */
+.checkout-wrapper {
+  /* max-width: 1240px;
+  margin: 0 auto; */
+  padding: 10px 10px;
+  overflow-x: hidden;
+}
+.input-text {
+  border-bottom: solid 1px black !important;
+  border: 0;
+  padding: 10px;
+  font-family: poppins;
+  margin-top: 10px;
+}
+form {
+  font-family: "Bebas Neue" !important;
+}
+.parent-form label {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.parent-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.placeorderbtn {
+  width: 95%;
+  background-color: #212121;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border: 0;
+  font-size: 24px;
+}
+.checkoutbox {
+  /* margin: 10px; */
+  border: solid 1px black;
+  padding: 10px;
+}
+.product-img-cart img {
+  height: 55px;
+}
+.product-cart-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.checkoutbox h2 {
+  margin-bottom: 20px;
+}
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-name-cart {
+  margin-left: 10px;
+}
+.cart-price-info {
+  padding-right: 10px;
+}
+.parent-checkout-wrapper label {
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Bebas Neue";
+}
+.cart-row {
+  font-family: "Bebas Neue";
+}
+.info-inner {
+  font-family: "Bebas Neue";
+}
+/* Checkout ends */
 @media screen and (max-width: 600px) {
   .cart-table table {
     border: 0;
@@ -1395,4 +1472,40 @@ button.checkoutbtn {
   .cart-wrapper h2 {
     font-size: 45px;
   }
+
+  /* Checkout page start */
+  section.container.checkout-wrapper {
+    padding-top: 150px;
+  }
+  .checkout-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1240px;
+  }
+  .parent-checkout-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+  }
+  .child-checkout-wrapper {
+    width: 45%;
+    margin-left: 25px;
+  }
+  .child-checkout-wrapper-1 {
+    width: 100%;
+  }
+  .checkoutbox {
+    min-height: 400px;
+  }
+  .checkoutbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-wrapper {
+    overflow-x: hidden;
+  }
+  /* Checkout Page ends */
 }
