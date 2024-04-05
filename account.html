@@ -22,7 +22,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <title>Athlete Mart - Product</title>
+    <title>Login | Register</title>
   </head>
   <body>
     <header class="white-bg">
@@ -36,16 +36,24 @@
         <div class="navi">
           <nav class="desk_tab_menu_cls">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="product_1.html">Product</a></li>
-              <li><a href="cart.html">Cart</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about.html">About us</a></li>
+              <li><a href="/menu.html">Menu</a></li>
+              <li><a href="/blogs.html">Blogs</a></li>
+              <li><a href="/gallery.html">Gallery</a></li>
+              <li><a href="/franchise.html">Franchise</a></li>
+              <li><a href="/contact.html">Contact us</a></li>
             </ul>
           </nav>
           <nav class="mobile_nav_cls">
             <ul class="navbar" id="navbar">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="product_1.html">Product</a></li>
-              <li><a href="cart.html">Cart</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about.html">About us</a></li>
+              <li><a href="/menu.html">Menu</a></li>
+              <li><a href="/blogs.html">Blogs</a></li>
+              <li><a href="/gallery.html">Gallery</a></li>
+              <li><a href="/franchise.html">Franchise</a></li>
+              <li><a href="/contact.html">Contact us</a></li>
               <a class="close" href="#">
                 <img src="img/close.png" alt="close" />
               </a>
@@ -80,166 +88,73 @@
     </div>
     <!-- header ends -->
     <main>
-      <!-- Product main container start -->
-      <div class="container product-container-wrapper">
-        <div class="parent-box-product">
-          <div class="box-child-product">
-            <div class="product-img-main">
-              <img src="img/product.webp" class="product-img" />
+      <section class="login-wrapper">
+        <div class="login-parent">
+          <div class="child-login-wrapper-1">
+            <div class="box-loging">
+              <h2>Login</h2>
+              <form id="loginForm">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                  placeholder="Enter your email"
+                  required
+                />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your Password"
+                  required
+                />
+                <input type="submit" name="submit" value="Login" />
+              </form>
             </div>
           </div>
-          <div class="box-child-product-2">
-            <h1 class="product-name">Women’s Jacket Down Fill</h1>
-            <div class="price-box">
-              <s>$130</s>
-              <p class="product-price">$90</p>
-            </div>
-            <div class="hr-line"></div>
-            <div class="description-cls">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-              </p>
-            </div>
-            <div class="counter-cls">
-              <h4>Hurry up ! Deal ends in :</h4>
-              <div id="counter"></div>
-              <script>
-                // Set the target time for the countdown (24-hour format, e.g., 'hh:mm:ss')
-                const targetTime = "23:59:59";
-
-                // Update the counter every second
-                const timer = setInterval(() => {
-                  // Get the current date and time
-                  const now = new Date();
-
-                  // Create a new Date object with today's date and the target time
-                  const targetDate = new Date(
-                    now.getFullYear(),
-                    now.getMonth(),
-                    now.getDate(),
-                    ...targetTime.split(":")
-                  ).getTime();
-
-                  // Calculate the remaining time
-                  let distance = targetDate - now.getTime();
-
-                  // If the target time is in the past, move it to the next day
-                  if (distance < 0) {
-                    const nextDay = new Date(
-                      now.getFullYear(),
-                      now.getMonth(),
-                      now.getDate() + 1,
-                      ...targetTime.split(":")
-                    ).getTime();
-                    distance = nextDay - now.getTime();
-                  }
-
-                  // Calculate hours, minutes, and seconds
-                  const hours = Math.floor(distance / (1000 * 60 * 60));
-                  const minutes = Math.floor(
-                    (distance % (1000 * 60 * 60)) / (1000 * 60)
-                  );
-                  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                  // Display the countdown
-                  document.getElementById(
-                    "counter"
-                  ).innerHTML = `<div>${hours}</div> <div>${minutes}</div>  <div>${seconds}</div> `;
-                }, 1000);
-              </script>
-            </div>
-            <div class="add-to-cart-cls">
-              <div class="qty">
-                <button class="minus" id="minus">-</button>
+          <div class="child-login-wrapper">
+            <div class="box-loging register-block">
+              <h2>Register</h2>
+              <form id="registerForm">
                 <input
-                  type="number"
-                  min="1"
-                  max="4"
-                  class="qty-input quantity"
-                  value="1"
-                  id="input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
                 />
-                <button class="plus" id="plus">+</button>
-              </div>
-              <div class="add-button-cls">
-                <button class="add-to-cart-btn" id="btn-for-add">
-                  Add To Cart
-                </button>
-              </div>
-              <div class="cart-parent" style="display: none">
-                <div class="cart-table">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Remove</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <div id="cart"></div>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="cart-subtotal">
-                  <div class="subtotal-box-parent">
-                    <div class="subtotal-header">Cart Totals</div>
-                    <div class="cart-subtotal-inner">
-                      <div class="cart-row">
-                        <div class="subtitle">Subtotal</div>
-                        <div class="price-product" id="subtotal">$125</div>
-                      </div>
-                      <div class="cart-row">
-                        <div class="subtitle">Total</div>
-                        <div class="price-product" id="total">$125</div>
-                      </div>
-                      <div class="cart-row">
-                        <button class="checkoutbtn">Proceed to Checkout</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <script>
-                const minusButton = document.getElementById("minus");
-                const plusButton = document.getElementById("plus");
-                const inputField = document.getElementById("input");
-
-                minusButton.addEventListener("click", (event) => {
-                  event.preventDefault();
-                  const currentValue = Number(inputField.value) || 0;
-                  inputField.value = currentValue - 1;
-                });
-
-                plusButton.addEventListener("click", (event) => {
-                  event.preventDefault();
-                  const currentValue = Number(inputField.value) || 0;
-                  inputField.value = currentValue + 1;
-                });
-              </script>
-            </div>
-            <div class="hr-line"></div>
-            <div id="cart"></div>
-            <div class="bottom-info">
-              <p class="Info-title">SKU:<span>D2300-3-2-3 </span></p>
-              <p class="Info-title">Category: <span>Womens </span></p>
-              <p class="Info-title">Tags:<span>Hot, Trend </span></p>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <input
+                  type="text"
+                  id="cpassword"
+                  name="cpassword"
+                  placeholder="Enter your Password"
+                  required
+                />
+                <input
+                  type="text"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder="Confirm Your Password"
+                  required
+                />
+                <input type="submit" name="submit" value="Register" />
+              </form>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Product main container end -->
+      </section>
 
       <!-- product starts -->
       <section class="product-wrapper">
-        <h2>Featured<span>.</span></h2>
+        <h2>Popular Items<span>.</span></h2>
         <div class="product-parent-box">
           <div class="product-child-box">
             <div class="img_product_cls">
@@ -262,7 +177,7 @@
                 <div class="category"><p>Women</p></div>
                 <div class="star-rating"></div>
               </div>
-              <a href="product_1.html">
+              <a href="#">
                 <h3>Women’s Jacket Down Fill</h3>
               </a>
               <span class="price"><s>$190 </s>$130</span>
@@ -277,7 +192,7 @@
                 <div class="category"><p>Women</p></div>
                 <div class="star-rating"></div>
               </div>
-              <a href="product_1.html">
+              <a href="#">
                 <h3>Women’s Jacket Down Fill</h3>
               </a>
               <span class="price"><s>$190 </s>$130</span>
@@ -292,7 +207,7 @@
                 <div class="category"><p>Women</p></div>
                 <div class="star-rating"></div>
               </div>
-              <a href="product_1.html">
+              <a href="#">
                 <h3>Women’s Jacket Down Fill</h3>
               </a>
               <span class="price"><s>$190 </s>$130</span>
@@ -307,7 +222,7 @@
                 <div class="category"><p>Women</p></div>
                 <div class="star-rating"></div>
               </div>
-              <a href="product_1.html">
+              <a href="#">
                 <h3>Women’s Jacket Down Fill</h3>
               </a>
               <span class="price"><s>$190 </s>$130</span>
@@ -322,7 +237,7 @@
                 <div class="category"><p>Women</p></div>
                 <div class="star-rating"></div>
               </div>
-              <a href="product_1.html">
+              <a href="#">
                 <h3>Women’s Jacket Down Fill</h3>
               </a>
               <span class="price"><s>$190 </s>$130</span>
@@ -428,6 +343,5 @@
 
     <script src="js/script.js"></script>
     <script src="js/login.js"></script>
-    <script src="js/product.js"></script>
   </body>
 </html>

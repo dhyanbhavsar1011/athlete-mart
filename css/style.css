@@ -51,6 +51,15 @@ header {
 nav.desk_tab_menu_cls {
   margin-right: 30px !important;
 }
+#userSection {
+  font-family: "Bebas Neue", sans-serif;
+}
+div#userSection button {
+  background: black;
+  color: white;
+  border: 0;
+  padding: 10px 30px;
+}
 /* Header Css - Ended */
 
 /* White Header Starts */
@@ -1040,6 +1049,7 @@ form {
 }
 .cart-price-info {
   padding-right: 10px;
+  padding-left: 110px;
 }
 .parent-checkout-wrapper label {
   margin-top: 10px;
@@ -1053,6 +1063,49 @@ form {
   font-family: "Bebas Neue";
 }
 /* Checkout ends */
+
+/* Account Page starts */
+.login-wrapper {
+  padding: 20px 10px;
+}
+.box-loging {
+  border: solid 1px black;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.box-loging form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-loging {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.box-loging input[type="submit"] {
+  background: black !important;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+  width: 379px;
+  border: 0;
+  border-radius: 5px;
+}
+.box-loging input {
+  padding: 11px;
+  width: 355px;
+  margin-bottom: 20px;
+  font-family: "Bebas Neue";
+  border: solid 1px #d7d7d7;
+  border-radius: 5px;
+}
+
+/* Account Page ends */
+
 @media screen and (max-width: 600px) {
   .cart-table table {
     border: 0;
@@ -1223,6 +1276,35 @@ form {
     position: relative;
     left: 30px;
   }
+  /* Account page start */
+  .login-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  section.login-wrapper {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .child-login-wrapper {
+    width: 47%;
+    margin-left: 20px;
+  }
+  .box-loging input {
+    padding: 11px;
+    width: 310px;
+  }
+  .box-loging input[type="submit"] {
+    width: 336px;
+  }
+  .box-loging {
+    min-height: 280px;
+  }
+  .child-login-wrapper-1 {
+    width: 47%;
+  }
+  /* Account page ends */
 }
 @media only screen and (min-width: 993px) {
   header {
@@ -1508,4 +1590,50 @@ form {
     overflow-x: hidden;
   }
   /* Checkout Page ends */
+
+  /* Account page start */
+  .login-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  section.login-wrapper {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .child-login-wrapper {
+    width: 47%;
+    margin-left: 20px;
+  }
+  .box-loging input {
+    padding: 11px;
+    width: 310px;
+  }
+  .box-loging input[type="submit"] {
+    width: 336px;
+    cursor: pointer;
+    transition: 0.4s ease all;
+  }
+  .box-loging input[type="submit"]:hover {
+    background: red !important;
+  }
+  .box-loging {
+    min-height: 380px;
+  }
+  .box-loging h2 {
+    margin-bottom: 20px;
+  }
+  .child-login-wrapper-1 {
+    width: 47%;
+  }
+  section.login-wrapper {
+    padding-top: 150px;
+  }
+
+  section.login-wrapper {
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+  }
 }
