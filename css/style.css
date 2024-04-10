@@ -1106,6 +1106,23 @@ form {
 
 /* Account Page ends */
 
+/* About us start*/
+.about-wrapper {
+  padding: 10px;
+}
+.about-wrapper p {
+  font-family: poppins;
+  font-size: 14px;
+  line-height: 24px;
+  color: gray;
+}
+.child-about-us img {
+  height: 450px;
+  margin-top: 20px;
+}
+
+/* About us end */
+
 @media screen and (max-width: 600px) {
   .cart-table table {
     border: 0;
@@ -1305,7 +1322,15 @@ form {
     width: 47%;
   }
   /* Account page ends */
+  /* About us page start */
+  .parent-about-us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  /* About us page ends */
 }
+
 @media only screen and (min-width: 993px) {
   header {
     background: transparent !important;
@@ -1636,4 +1661,30 @@ form {
     max-width: 992px;
     margin: 0 auto;
   }
+  /* About us page start */
+  .parent-about-us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .about-wrapper {
+    padding: 10px;
+    padding-top: 150px;
+  }
+  section.about-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .child-about-us:nth-child(2) img {
+    height: 600px;
+  }
+
+  .child-about-us:nth-child(1) {
+    width: 50%;
+    padding-right: 40px;
+  }
+  .new-product {
+    padding-top: 150px;
+  }
+  /* About us page ends */
 }
